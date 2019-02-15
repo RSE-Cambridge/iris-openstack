@@ -11,7 +11,7 @@ Soon we hope to enable external access to OpenStack APIs, with a federated login
 ## Onboarding for 2018/2019
 
 Once invited to access the system, please request an AlaSKA account via:
-(https://www.hpc.cam.ac.uk/external-application)[https://www.hpc.cam.ac.uk/external-application]
+[https://www.hpc.cam.ac.uk/external-application](https://www.hpc.cam.ac.uk/external-application)
 
 This will setup ssh access to: `alaska-gate.vss.cloud.cam.ac.uk`
 

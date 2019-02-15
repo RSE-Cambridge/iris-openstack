@@ -1,7 +1,10 @@
 ## Welcome to the IRIS Scientific OpenStack Documentation
 
+![IRIS logo](https://www.iris.ac.uk/wp-content/uploads/2018/07/iris-circle-100x100.png)
+
 IRIS aims to create a common eInfrastructure for STFC science.
-For more details visit: ttps://www.iris.ac.uk
+For more details visit:
+https://www.iris.ac.uk
 
 Below we document the "Scientific OpenStack" digital assets.
 Phase 1 is due to be completed at the end of March 2019,
@@ -17,22 +20,25 @@ the current digital assets to create/upgrade/maintain an IRIS OpenStack site.
 
 We define "IRIS compatible" with a set of tests that determine the capabilities of an OpenStack cloud.
 They are designed such that any OpenStack cloud that carries the
-("OpenStack Powered Compute")[https://www.openstack.org/brand/interop/] logo
-will pass the minimum standards for an IRIS cloud.
+[OpenStack Powered Compute](https://www.openstack.org/brand/interop/)
+certification will pass the minimum standards for an IRIS cloud.
+These tests can be run against any OpenStack cloud, not just IRIS OpenStack clouds.
 
-As an IRIS user, if you keep the the APIs checked by these tests,
-your scirpts or application that access OpenStack will work across all IRIS sites.
+If you use only the APIs checked by these tests,
+your scirpts/application should work across all IRIS sites.
 
 There will also be a set of optional features that are tested.
-The aim is the reference OpenStack configuration will pass all the tests.
+The aim is the digital assets containing the reference OpenStack
+configuration will help sites run OpenStack deployments that can
+pass all of the IRIS compatible tests.
 
-These tests will be able to tell you which of the community maintained
-IRIS appliances will be able to work on a given IRIS OpenStack site.
+Packaged IRIS Appliances should document if they need any of the optional tests.
+This should help you work out what appliances will work at what sites.
 
 ### What IRIS OpenStack sites are currently available?
 
 To request IRIS resources please see:
-htps://www.iris.ac.uk/community/requesting-resources-from-iris/
+https://www.iris.ac.uk/community/requesting-resources-from-iris/
 
 TODO: list the current IRIS sites and their IRIS compatibility test results.
 
@@ -41,8 +47,8 @@ TODO: list the current IRIS sites and their IRIS compatibility test results.
 Here are links to information on how to access each of the
 IRIS funded OpenStack sites:
 
-* RAL[ral]: please contact Alex Dibbo, STFC
-* Cambridge[cambridge]: please contant John Taylor, StackHPC
+* (RAL)[ral]: please contact Alex Dibbo, STFC
+* (Cambridge)[cambridge]: please contant John Taylor, StackHPC
 
 TODO: add docs for each OpenStack site.
 
@@ -61,7 +67,7 @@ Once you have access to OpenStack resources at one of the sites, please try:
 ### I have IRIS hardware I would like to expose uising OpenStack. What should I do next?
 
 We ran a workshop to get some sites started building their site specific
-(OpenStack Kayboe)[https://kayobe.readthedocs.io] configuration.
+[OpenStack Kayboe](https://kayobe.readthedocs.io) configuration.
 For a digital assest containing the material used at the workshop,
 please see:
 https://drive.google.com/drive/u/1/folders/1n3yq5AamXx4YIcTfLhIj5Fm9CAjeVOu2

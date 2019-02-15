@@ -39,14 +39,14 @@ pass all of the IRIS compatible tests.
 Packaged IRIS Appliances should document if they need any of the optional tests.
 This should help you work out what appliances will work at what sites.
 
-### What IRIS OpenStack sites are currently available?
+### How can I get access to IRIS OpenStack resources?
 
-To request IRIS resources please see:
+To request IRIS resources:
 [https://www.iris.ac.uk/community/requesting-resources-from-iris/](https://www.iris.ac.uk/community/requesting-resources-from-iris/)
 
-TODO: list the current IRIS sites and their IRIS compatibility test results.
+To start a free trail with an OpenStack public cloud: [https://www.openstack.org/passport](https://www.openstack.org/passport) 
 
-### I have been given OpenStack resources. What should I do next?
+### I have been given OpenStack resources. What next?
 
 Here are links to information on how to access each of the
 IRIS funded OpenStack sites:
@@ -54,17 +54,18 @@ IRIS funded OpenStack sites:
 * [RAL](ral)
 * [Cambridge](cambridge)
 
-### I would like to try out an IRIS Appliance. What should I do next?
+### What applications are available on IRIS OpenStack?
 
 One quick way to get started with OpenStack is trying out an IRIS appliance.
 
-Please read the site specific details above first.
-Once you have access to OpenStack resources at one of the sites, please try:
+Once you have access to OpenStack resources, please try:
 
-* TODO: Get me a Kubernetes Cluster
-* TODO: Get me a JuypterHub Cluster
-* TODO: Get me a dedicated Slurm Cluster
-* TODO: Get me an OpenHPC enabled VM
+* [Get a Computer with OpenHPC and Conda](computer)
+* [Kubernetes Cluster](k8s)
+* [Juypter notebooks via JupterHub](juypter)
+* [Dedicated Slurm cluster](slurm)
+
+TODO: add docs so above links are not broken.
 
 ### I have IRIS hardware I would like to expose uising OpenStack. What should I do next?
 

@@ -1,6 +1,6 @@
-## Welcome to the IRIS Scientific OpenStack Documentation
-
 ![IRIS logo](https://www.iris.ac.uk/wp-content/uploads/2018/07/iris-circle-100x100.png)
+
+## Welcome to the IRIS Scientific OpenStack Documentation
 
 IRIS aims to create a common eInfrastructure for STFC science.
 For more details visit:

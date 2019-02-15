@@ -4,7 +4,7 @@
 
 IRIS aims to create a common eInfrastructure for STFC science.
 For more details visit:
-https://www.iris.ac.uk
+[https://www.iris.ac.uk](https://www.iris.ac.uk)
 
 Below we document the "Scientific OpenStack" digital assets.
 Phase 1 is due to be completed at the end of March 2019,
@@ -16,7 +16,11 @@ the current digital assets to create/upgrade/maintain an IRIS OpenStack site.
 
 ## Frequently Asked Questions
 
+The documention is structured as FAQs below.
+
 ### What makes an OpenStack site "IRIS compatible"?
+
+To run the conformance tests please see: [IRIS Conformance Tests](iris-conformance-tests)
 
 We define "IRIS compatible" with a set of tests that determine the capabilities of an OpenStack cloud.
 They are designed such that any OpenStack cloud that carries the
@@ -38,7 +42,7 @@ This should help you work out what appliances will work at what sites.
 ### What IRIS OpenStack sites are currently available?
 
 To request IRIS resources please see:
-https://www.iris.ac.uk/community/requesting-resources-from-iris/
+[https://www.iris.ac.uk/community/requesting-resources-from-iris/](https://www.iris.ac.uk/community/requesting-resources-from-iris/)
 
 TODO: list the current IRIS sites and their IRIS compatibility test results.
 
@@ -47,10 +51,8 @@ TODO: list the current IRIS sites and their IRIS compatibility test results.
 Here are links to information on how to access each of the
 IRIS funded OpenStack sites:
 
-* (RAL)[ral]: please contact Alex Dibbo, STFC
-* (Cambridge)[cambridge]: please contant John Taylor, StackHPC
-
-TODO: add docs for each OpenStack site.
+* [RAL](ral)
+* [Cambridge](cambridge)
 
 ### I would like to try out an IRIS Appliance. What should I do next?
 
@@ -70,10 +72,11 @@ We ran a workshop to get some sites started building their site specific
 [OpenStack Kayboe](https://kayobe.readthedocs.io) configuration.
 For a digital assest containing the material used at the workshop,
 please see:
+[https://drive.google.com/drive/u/1/folders/1n3yq5AamXx4YIcTfLhIj5Fm9CAjeVOu2]
 https://drive.google.com/drive/u/1/folders/1n3yq5AamXx4YIcTfLhIj5Fm9CAjeVOu2
 (TODO: add static tarball)
 
 Phase 1 is using the Cambridge University OpenStack deployment as a reference.
 Firstly here is the reference archtecture documentation:
-https://drive.google.com/drive/u/1/folders/1bIMrAPNfbGWO0ptWd7MEGF3vHUIpsDVM
+[https://drive.google.com/drive/u/1/folders/1bIMrAPNfbGWO0ptWd7MEGF3vHUIpsDVM](https://drive.google.com/drive/u/1/folders/1bIMrAPNfbGWO0ptWd7MEGF3vHUIpsDVM)
 (TODO: add static tarball)

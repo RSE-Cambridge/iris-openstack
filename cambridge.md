@@ -38,7 +38,7 @@ Please tell us:
 
 This is a manual process. Asking in the #openstack channel in slack may speed things up.
 
-## What resources are currently available at Cambridge?
+## Resources
 
 There are currently only 8 hypervisors enabled.
 Given current funding levels we expect to average 40 hypervisors during 2019/2020.
@@ -63,7 +63,7 @@ To get the best performance, please try to:
 * we have very few floating IPs currently available, please use them wisely
 * avoid the largest VM size, unless you really need that much memory in one host
 
-## Create your first server
+## Create First Server
 
 Now you have authenticated, and have been authorized on a project other than the "iris"
 holiding project, you can get started using OpenStack and create your first server.
@@ -91,7 +91,7 @@ Look at the list of "actions" associated with your server.
 For more details please see:
 https://docs.openstack.org/horizon/rocky/user/
 
-## Using CLI with Application Credientails
+## Using the CLI
 
 If you want to automate the creation of OpenStack resources, the best starting
 point is to understand accessing OpenStack via the CLI.
@@ -112,7 +112,7 @@ any time via the same web page.
 Now you have the CLI work, take a look at the OpenStack Applicaiton Developer Portal:
 https://developer.openstack.org/
 
-## Developing Applications on OpenStack
+## Developing Apps
 
-For advice please see the OpenStack Application Developer Portal:
+For further advice please see the OpenStack Application Developer Portal:
 https://developer.openstack.org/

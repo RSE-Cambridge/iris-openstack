@@ -4,30 +4,69 @@ The [Cambirdge University](https://www.hpc.cam.ac.uk/) IRIS OpenStack deployment
 
 For more details please contact John Taylor, StackHPC.
 
-## Creating your Account
+## Authentication
 
 Please vist the OpenStack Horizon Dashboard to login, selecting "Federated Login":
 https://cumulus.openstack.hpc.cam.ac.uk/
 
-Due to the use of the EGI IAA development instance, while your instituion may be listed,
-it is unlikely to work. Grid certificates and google accounts however do seem to work,
-so please use those instead.
+This will redirect you, via a local Keycloak instances, to EGI AAI (dev instance).
+Because we currently only use the dev instance, only grid certificates, google accounts,
+and similar are expected to work. Please choose a method that works best for you.
 
 Once IRIS's Indigo IAM setup has access to edugain, the hope is to switch all accounts
-to that system.
+to that system. Once complete, you should be able to use your home institution
+credentials in a very similar way to the social account.
 
-## Getting your Account authorized
+We are using social credentails to help get early feedback on using this federated
+approach.
+
+## Authorization
+
+Once you are able to authenticate with OpenStack, we now need to get you access to some
+resources within OpenStack.
 
 While it is hoped Keycloak and/or Indio IAM will eventualy automate the group membership
 workflow, this is currently a fairly manual process that can be kickstarted by opening a
 bug against this github repository:
 https://github.com/RSE-Cambridge/cumulus-config/issues
 
-Please tell us what project you are working on (LSST, Euclid, etc)
-and please provide your user name as shown here:
-https://cumulus.openstack.hpc.cam.ac.uk/project/api_access/view_credentials/
+Please tell us:
 
-## Starting your First Server
+* what project you are working on (LSST, Euclid, etc)
+* your social email address used to authenticate
+* your home instituion email address
+
+This is a manual process. Asking in the #openstack channel in slack may speed things up.
+
+## What resources are currently available at Cambridge?
+
+There are currently only 8 hypervisors enabled.
+Given current funding levels we expect to average 40 hypervisors during 2019/2020.
+
+Each hypervisor has two Xeon Gold 6142
+(i.e. a total of 64 hyperthreaded cores runing at 2.60 GHz per hypervisor)
+with 192GB RAM (i.e. 3GB per hyperthreaded core) and around 400GB of local SSD.
+There is a bonded 2 x 25GbE link to a redundant pair of switches.
+The hardware includes a 6142F with integrated 100G omni-path, wired into the
+cumulus fabric with a 2:1 overcomit, but it is currently unsed by IRIS.
+
+External storage is all provided by a small Ceph cluster. Currently it has
+around 45TB of usable space, provided by spinning disks attached to three
+servers, each with 4 x 10GbE bond. There are plans to upgrade this capacity
+depending on the demand seen.
+
+To get the best performance, please try to:
+
+* boot from a provided base image rather than your own snapshot or uploaded image
+* don't boot from a volume, local ssd will take slightly longer to provision, but faster once working
+* use the network "cumulus-network" (it is VLAN based, not VXLAN)
+* we have very few floating IPs currently available, please use them wisely
+* avoid the largest VM size, unless you really need that much memory in one host
+
+## Create your first server
+
+Now you have authenticated, and have been authorized on a project other than the "iris"
+holiding project, you can get started using OpenStack and create your first server.
 
 Please ensure you have an appropriate ssh public key imported here:
 https://cumulus.openstack.hpc.cam.ac.uk/project/key_pairs
@@ -52,7 +91,7 @@ Look at the list of "actions" associated with your server.
 For more details please see:
 https://docs.openstack.org/horizon/rocky/user/
 
-## Using Application Credientails to access the CLI
+## Using CLI with Application Credientails
 
 If you want to automate the creation of OpenStack resources, the best starting
 point is to understand accessing OpenStack via the CLI.
@@ -77,69 +116,3 @@ https://developer.openstack.org/
 
 For advice please see the OpenStack Application Developer Portal:
 https://developer.openstack.org/
-
-## What resources are currently available at Cambridge?
-
-There are currently only 8 hypervisors enabled.
-We expect to have 40 in use as demand rises, with the option of bursting to 64.
-
-Each hypervisor has two Xeon Gold 6142
-(i.e. a total of 64 hyperthreaded cores runing at 2.60 GHz per hypervisor)
-with 192GB RAM (i.e. 3GB per hyperthreaded core) and around 400GB of local SSD.
-There is a bonded 2 x 25GbE link to a redundant pair of switches.
-The hardware includes a 6142F with integrated 100G omni-path, wired into the
-cumulus fabric with a 2:1 overcomit, but it is currently unsed by IRIS.
-
-External storage is all provided by a small Ceph cluster. Currently it has
-around 45TB of usable space, provided by spinning disks attached to three
-servers, each with 4 x 10GbE bond. There are plans to upgrade this capacity
-depending on the demand seen.
-
-To get the best performance, please try to:
-
-* boot from a provided base image rather than your own snapshot or uploaded image
-* don't boot from a volume, local ssd will take slightly longer to provision, but faster once working
-* use the network "cumulus-network" (it is VLAN based, not VXLAN)
-* we have very few floating IPs currently available, please use them wisely
-* avoid the largest VM size, unless you really need that much memory in one host
-
-## Onboarding for 2018/2019
-
-Once invited to access the system, please request an AlaSKA account via:
-[https://www.hpc.cam.ac.uk/external-application](https://www.hpc.cam.ac.uk/external-application)
-
-This will setup ssh access to: `alaska-gate.vss.cloud.cam.ac.uk`
-
-### Setting up SOCKS proxy to access Cumulus OpenStack.
-
-At the moment Cumulus OpenStack is isolated in the AlaSKA network.
-
-From your linux desktop/laptop, we create a SOCKS proxy on port 8080 to alaska-gate by running the following command:
-
-```
-ssh test123@alaska-gate.vss.cloud.cam.ac.uk -C -D 8080
-```
-
-We now configure ssh to use the above proxy when accessing cumulus login node:
-
-```
-Host 10.60.150.1
-  ProxyCommand=nc -X 5 -x localhost:8080 %h %p
-  ForwardAgent yes
-```
-
-This allows us to open a ssh session and additional socks proxy to the cumulus login node, using `alaska-gata` by running the following:
-
-```
-ssh test123@centos@10.60.150.1 -C -D 8081
-```
-
-Now you can configure your browser (or system) to use the socks proxy `localhost:8081`. This forwards the browser requests to the cumulus login node (via alaska-gate).
-
-With the above browser configuration in place, you can access the OpenStack dashboard: `http://10.205.0.1`
-
-Note: the OpenStack dashboard (called Horizon) can be used to download credentails to access OpenStack via the command line.
-
-### Access OpenStack
-
-TODO: add details on how to access the OpenStack deployment.

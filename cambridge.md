@@ -81,8 +81,27 @@ https://developer.openstack.org/
 ## What resources are currently available at Cambridge?
 
 There are currently only 8 hypervisors enabled.
+We expect to have 40 in use as demand rises, with the option of bursting to 64.
 
-TODO...
+Each hypervisor has two Xeon Gold 6142
+(i.e. a total of 64 hyperthreaded cores runing at 2.60 GHz per hypervisor)
+with 192GB RAM (i.e. 3GB per hyperthreaded core) and around 400GB of local SSD.
+There is a bonded 2 x 25GbE link to a redundant pair of switches.
+The hardware includes a 6142F with integrated 100G omni-path, wired into the
+cumulus fabric with a 2:1 overcomit, but it is currently unsed by IRIS.
+
+External storage is all provided by a small Ceph cluster. Currently it has
+around 45TB of usable space, provided by spinning disks attached to three
+servers, each with 4 x 10GbE bond. There are plans to upgrade this capacity
+depending on the demand seen.
+
+To get the best performance, please try to:
+
+* boot from a provided base image rather than your own snapshot or uploaded image
+* don't boot from a volume, local ssd will take slightly longer to provision, but faster once working
+* use the network "cumulus-network" (it is VLAN based, not VXLAN)
+* we have very few floating IPs currently available, please use them wisely
+* avoid the largest VM size, unless you really need that much memory in one host
 
 ## Onboarding for 2018/2019
 

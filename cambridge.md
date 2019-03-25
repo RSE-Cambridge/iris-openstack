@@ -7,7 +7,7 @@ For more details please contact John Taylor, StackHPC.
 ## Authentication
 
 Please vist the OpenStack Horizon Dashboard to login, selecting "Federated Login":
-https://cumulus.openstack.hpc.cam.ac.uk/
+[https://cumulus.openstack.hpc.cam.ac.uk/](https://cumulus.openstack.hpc.cam.ac.uk/)
 
 This will redirect you, via a local Keycloak instances, to EGI AAI (dev instance).
 Because we currently only use the dev instance, only grid certificates, google accounts,
@@ -28,7 +28,7 @@ resources within OpenStack.
 While it is hoped Keycloak and/or Indio IAM will eventualy automate the group membership
 workflow, this is currently a fairly manual process that can be kickstarted by opening a
 bug against this github repository:
-https://github.com/RSE-Cambridge/cumulus-config/issues
+[https://github.com/RSE-Cambridge/cumulus-config/issues](https://github.com/RSE-Cambridge/cumulus-config/issues)
 
 Please tell us:
 
@@ -69,7 +69,7 @@ Now you have authenticated, and have been authorized on a project other than the
 holiding project, you can get started using OpenStack and create your first server.
 
 Please ensure you have an appropriate ssh public key imported here:
-https://cumulus.openstack.hpc.cam.ac.uk/project/key_pairs
+[https://cumulus.openstack.hpc.cam.ac.uk/project/key_pairs](https://cumulus.openstack.hpc.cam.ac.uk/project/key_pairs)
 
 In the top left, make sure you have the correct project selected,
 and not the project called "iris". You will now be able to see all

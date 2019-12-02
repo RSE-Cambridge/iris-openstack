@@ -1,6 +1,6 @@
 # IRIS OpenStack @ Cambridge University
 
-The [Cambirdge University](https://www.hpc.cam.ac.uk/) IRIS OpenStack deployment is part of the [Cumulus](https://www.top500.org/system/179577) supercomputer.
+The [Cambridge University](https://www.hpc.cam.ac.uk/) IRIS OpenStack deployment is part of the [Cumulus](https://www.top500.org/system/179577) supercomputer.
 
 For more details please contact John Taylor, StackHPC.
 

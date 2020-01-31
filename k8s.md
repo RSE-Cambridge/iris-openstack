@@ -4,6 +4,12 @@ On the Cambridge OpenStack system, we are using OpenStack Magnum to provide kube
 This follows on from the good work done by the CERN OpenStack team. Note that Magnum is now a
 [certified kuberenetes installer](https://landscape.cncf.io/selected=magnum)
 
+## WIP: Magnum Examples
+
+More examples on using Magnum can be found in the following code repository:
+
+https://github.com/RSE-Cambridge/iris-magnum
+
 ## Accessing my Kubernetes
 
 Once you have access to horizon, you can created a k8s clusters by looking in the "container infra" tab.

@@ -68,7 +68,7 @@ cumulus fabric with a 2:1 overcomit, but it is currently unsed by IRIS.
 For VM sizing, two 90GB VMs, using under 200GB of local disk, should fit into
 a single hypervisor. Typically 56 vCPUs are available per host, although
 unless you have a dedicated agregate, hyperthreading will be turned off and
-you will get 2:1 oversubscribed to phyiscal CPUs.
+you will get 2:1 oversubscribed to physical CPUs.
 
 ### Cascade Lake
 

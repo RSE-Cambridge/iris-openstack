@@ -58,7 +58,7 @@ To get the best performance, please try to:
 ### Skylake
 
 Each hypervisor (Dell PowerEdge C6420) has two Intel Xeon Gold 6142
-(i.e. a total of 64 hyperthreaded cores runing at 2.60 GHz per hypervisor)
+(i.e. a total of 64 hyperthreaded cores runing at 2.60-3.70 GHz per hypervisor)
 with 192GB RAM (i.e. 3GB per hyperthreaded core) and around 400GB of local SSD.
 There is a bonded 2 x 25GbE link to a redundant pair of switches.
 
@@ -73,7 +73,7 @@ you will get 2:1 oversubscribed to phyiscal CPUs.
 ### Cascade Lake
 
 Each hypervisor (Dell PowerEdge C6420) has two Intel Xeon Platinum 8276
-(i.e. a total of 112 hyperthreaded cores runing at 2.20 GHz per hypervisor)
+(i.e. a total of 112 hyperthreaded cores runing at 2.20-4.00 GHz per hypervisor)
 with 192GB RAM (i.e. 1.7GB per hyperthreaded core) and around 800GB of local SSD.
 There is a single 50GbE Mellanox ConnectEx-6 ethernet link
 (with the option for RoCEv2 via SR-IOV).

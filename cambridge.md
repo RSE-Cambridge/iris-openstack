@@ -82,7 +82,7 @@ The hardware also includes a (currently unused by IRIS) HDR100
 Mellanox Infiniband connection.
 
 For VM sizing, two 90GB VMs, using under 400GB of local disk, should fit into
-a single hypervisor. Typiucally there are 104 vCPUs available for VMs.
+a single hypervisor. Typiucally there are 110 vCPUs available for VMs.
 If you are in a dedicated aggregate, this can be 1:1 hyperthreads to vCPUs.
 
 ## Create First Server

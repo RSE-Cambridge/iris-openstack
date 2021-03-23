@@ -67,7 +67,7 @@ Once you have access to OpenStack resources, please try:
 
 TODO: add docs so above links are not broken.
 
-### I have IRIS hardware I would like to expose uising OpenStack. What should I do next?
+### I have IRIS hardware I would like to expose using OpenStack. What should I do next?
 
 We ran a workshop to get some sites started building their site specific
 [OpenStack Kayboe](https://kayobe.readthedocs.io) configuration.

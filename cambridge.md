@@ -40,7 +40,7 @@ This is a manual process. Asking in the #openstack channel in slack may speed th
 
 ## Resources
 
-There are currently a mix of skylake and cascade lake hypervisors.
+There are currently (March 2021) a mix of skylake and cascade lake hypervisors.
 
 External storage is all provided by a small Ceph cluster. Currently it has
 around 45TB of usable space, provided by spinning disks attached to three

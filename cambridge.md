@@ -65,6 +65,11 @@ There is a bonded 2 x 25GbE link to a redundant pair of switches.
 The hardware includes a 6142F with integrated 100G omni-path, wired into the
 cumulus fabric with a 2:1 overcomit, but it is currently unsed by IRIS.
 
+For VM sizing, two 90GB VMs, using under 200GB of local disk, should fit into
+a single hypervisor. Typically 56 vCPUs are available per host, although
+unless you have a dedicated agregate, hyperthreading will be turned off and
+you will get 2:1 oversubscribed to phyiscal CPUs.
+
 ### Cascade Lake
 
 Each hypervisor (Dell PowerEdge C6420) has two Intel Xeon Platinum 8276
@@ -75,6 +80,10 @@ There is a single 50GbE Mellanox ConnectEx-6 ethernet link
 
 The hardware also includes a (currently unused by IRIS) HDR100
 Mellanox Infiniband connection.
+
+For VM sizing, two 90GB VMs, using under 400GB of local disk, should fit into
+a single hypervisor. Typiucally there are 104 vCPUs available for VMs.
+If you are in a dedicated aggregate, this can be 1:1 hyperthreads to vCPUs.
 
 ## Create First Server
 
